@@ -13,8 +13,6 @@ import org.apache.commons.csv.CSVPrinter;
 
 public class ImdbCrawl extends ImdbCrawlComponents implements BaseConfiguration{
 
-
-
     public static void main(String[] args) throws IOException {
 
 
@@ -66,7 +64,7 @@ public class ImdbCrawl extends ImdbCrawlComponents implements BaseConfiguration{
     }
 
     public static void getAdditionalLinksToCrawl() {
-      List <WebElement> elements = driver.findElementsByCssSelector("ul.quicklinks li a");
+      List <WebElement> elements = driver.findElementsByCssSelector(Locators.additionalMovieLinksLocator);
                 elements.forEach(webElement -> additionalLinksToCrawl.add(webElement.getAttribute("href")));
                 additionalLinksToCrawl.forEach(element -> System.out.println(element));
     }
