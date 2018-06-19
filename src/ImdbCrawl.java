@@ -1,11 +1,9 @@
 import org.openqa.selenium.WebElement;
-
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
-
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 
@@ -28,7 +26,6 @@ public class ImdbCrawl extends ImdbCrawlComponents implements BaseConfiguration{
             }
         }
 
-
     }
 
     public static void writeToCsvFile() throws IOException {
@@ -44,7 +41,6 @@ public class ImdbCrawl extends ImdbCrawlComponents implements BaseConfiguration{
         }
 
         csvPrinter.flush();
-
     }
 
     public static void getTop250(String movieURL) {
